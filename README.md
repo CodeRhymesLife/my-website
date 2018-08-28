@@ -6,4 +6,4 @@ My website
 2) Create a new virtual envrionment ```virtualenv venv```
 3) Activate the virtual env ```source venv/bin/source```
 4) Install dependencies ```pip install -r requirements.txt```
-5) Point flask to the correct entry point ```echo 'export FLASK_APP=website.py' >> venv/bin/activate```
+5) Point flask to the correct entry point ```cp .flaskenv.example .flaskenv```
