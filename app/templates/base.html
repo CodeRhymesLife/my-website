@@ -1,0 +1,72 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    Ryan James{% if title %} - {{ title }}{% endif %}
+{% endblock %}
+
+{% block navbar %}
+    <nav class="navbar navbar-default sticky-top">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon" aria-hidden="true"></span>
+                    <a class="navbar-brand" href="{{ url_for('index') }}">Ryan James</a> 
+                </a>
+            </div>
+
+            <div class="navbar-right"> 
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('software') }}">Software</a></li>
+                    <li><a href="{{ url_for('healthcare') }}">Healthcare</a></li>
+                    <li><a href="{{ url_for('entrepreneurship') }}">Entrepreneurship</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+{% endblock %}
+
+{%- block content %}
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-info" role="alert">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        {# application content needs to be provided in the app_content block #}
+        {% block app_content %}{% endblock %}
+    </div>
+
+    {%- block footer %}
+        <div class="footer-buffer"></div>
+        <footer class="footer">
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="https://github.com/drryanjames" target="_blank">
+                            <img src="static/images/icons/github_icon.png"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/in/ryanjameshealth/" target="_blank">
+                            <img src="static/images/icons/linkedin_icon.png"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=2250837" target="_blank">
+                            <img src="static/images/icons/facebook_icon.png"></img>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    {%- endblock footer %}
+{%- endblock content %}
+

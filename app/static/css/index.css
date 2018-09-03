@@ -1,0 +1,24 @@
+.interests {
+    text-align: center;
+}
+
+.interests .interest {
+    height: 140px;
+    padding: 10px;
+    background-color: #F8F8F8;
+}
+
+.interests .interest:hover {
+    background-color: #D8D8D8;
+    cursor: pointer;
+}
+
+.interests .interest .glyphicon {
+    font-size: 5em;
+}
+
+@media (max-width: 768px) {
+    .interests .interest, .page.healthcare .videoContainer {
+        margin: 20px;
+    }
+}

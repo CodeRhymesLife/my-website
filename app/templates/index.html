@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{super()}}
+    {% assets "index_css" %}
+        <link rel="stylesheet" href="{{ ASSET_URL }}" />
+    {% endassets %}
+{% endblock %}
+
+{% block scripts %}
+    {{super()}}
+    {% assets "index_js" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+{% endblock %}
+
+{% block app_content %}
+    <h1>About Me</h1>
+    <p>
+    I am a full stack healthcare technology software engineer building, researching and commercializing solutions to challenging healthcare problems.
+    Please click the links below to learn more about me.
+    </p>
+    
+    <br/>
+    
+    <div class="row interests">
+        <div class="col-sm-4">
+            <div class="interest" onclick="showPage('software')">
+                <span class="glyphicon glyphicon-console" aria-hidden="true"></span>
+                <h4>Software<br/>Engineering</h4>
+            </div>
+        </div>
+    
+        <div class="col-sm-4">
+            <div class="interest" onclick="showPage('healthcare');">
+                <span class="glyphicon glyphicon-object-align-left" aria-hidden="true"></span>
+                <h4>Healthcare<br/>Technology</h4>
+            </div>
+        </div>
+    
+        <div class="col-sm-4">
+            <div class="interest" onclick="showPage('entrepreneurship')">
+                <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                <h4>Entrepreneurship</h4>
+            </div>
+        </div>
+    </div>
+{% endblock %}
