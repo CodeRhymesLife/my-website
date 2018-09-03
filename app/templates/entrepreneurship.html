@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{super()}}
+    {% assets "entrepreneurship_css" %}
+        <link rel="stylesheet" href="{{ ASSET_URL }}" />
+    {% endassets %}
+{% endblock %}
+
+{% block scripts %}
+    {{super()}}
+    {% assets "entrepreneurship_js" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+{% endblock %}
+
+{% block app_content %}
+    <h1>Entrepreneurship</h1>
+    <p>
+        I plan to build a successful company that researches, develops and commercializes innovative healthcare technologies. 
+        Commercialization is important to me because it's a vehicle for bringing new ideas from the bench to bedside. 
+        I've learned many lessons over the years, including the importance of understanding market 
+        and stakeholders early. In 2016, I co-founded a company named Pear Med where we developed a virtual reality based 
+        surgical planning tool (<a href="https://www.youtube.com/watch?v=H1NS6GyttLg" target="_blank">video</a>). 
+        We failed, in part, because we didn't understand our user's needs or how hospitals would purchase our product. 
+        I reflected on these important lessons before co-founding Pyrus, where we have an innovative solution for a large 
+        access to care problem.  
+    </p>
+    
+    <p>
+        At <a href="http://www.pyrusmedical.com" target="_blank">Pyrus</a> we're developing a suitcase-sized electrophysiology 
+        lab that decentralizes cardiac ablations to bring safe procedures to rural areas where most atrial fibrillation (AFib) patients live.
+        I couldn't be more excited about our mission and its potential impact.
+        33 million people suffer from AFib every year, yet only 5% of eligible patients receive the definitive treatment--cardiac ablation. 
+        This is an important issue to address because AFib can lead to stroke, heart attack and premature death, 
+        and it affects older adults--a population that will continue to grow as life expectancy increases. 
+        I look forward to updating this description as we learn from our market research.
+    </p>
+{% endblock %}
