@@ -25,21 +25,21 @@
     
     <div class="row interests">
         <div class="col-sm-4">
-            <div class="interest" onclick="showPage('software')">
+            <div class="interest" onclick="window.location.href='{{ url_for('software')}}'">
                 <span class="glyphicon glyphicon-console" aria-hidden="true"></span>
                 <h4>Software<br/>Engineering</h4>
             </div>
         </div>
     
         <div class="col-sm-4">
-            <div class="interest" onclick="showPage('healthcare');">
+            <div class="interest" onclick="window.location.href='{{ url_for('healthcare')}}'">
                 <span class="glyphicon glyphicon-object-align-left" aria-hidden="true"></span>
                 <h4>Healthcare<br/>Technology</h4>
             </div>
         </div>
     
         <div class="col-sm-4">
-            <div class="interest" onclick="showPage('entrepreneurship')">
+            <div class="interest" onclick="window.location.href='{{ url_for('entrepreneurship')}}'">
                 <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
                 <h4>Entrepreneurship</h4>
             </div>
