@@ -3,6 +3,16 @@ from .. import app
 
 bundles = {
 
+    'healthcare_js': Bundle(
+        'js/common.js',
+        output='gen/helathcare.js'),
+
+    'healthcare_css': Bundle(
+        'css/bootstrap-extensions.css',
+        'css/common.css',
+        'css/healthcare.css',
+        output='gen/helathcare.css'),
+    
     'index_js': Bundle(
         'js/common.js',
         output='gen/index.js'),

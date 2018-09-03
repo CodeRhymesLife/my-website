@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{super()}}
+    {% assets "healthcare_css" %}
+        <link rel="stylesheet" href="{{ ASSET_URL }}" />
+    {% endassets %}
+{% endblock %}
+
+{% block scripts %}
+    {{super()}}
+    {% assets "healthcare_js" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+{% endblock %}
+
+{% block app_content %}
+    <h1>Healthcare Technology</h1>
+    <p>
+        Helping people with technology has always been an interest of mine, 
+        but when I helped a family understood their daughter's disease with a virtual reality application I built (video below) 
+        something in me changed. The idea that technology can help us understand what's inside us, 
+        improve peoples' access to care, and improve clinical outcomes is what excites me when I wake up. 
+        The mountains of underused and ignored, potentially life-saving data is what drives me to research novel ways to make data-driven decisions.
+        My current work preserves the 3-dimensionality of data produced during cardiac catheterization procedures 
+        to better understand how virtual reality and mixed reality can facilitate minimally invasive therapies (videos below).
+        In the near future, I hope to build on this work to understand how self driving catheters can address access to care problems.
+    </p>
+    
+    <div class="row">
+        <div class="col-sm-4 videoContainer">
+            <iframe width="90%" src="https://www.youtube.com/embed/8SUFeplhgBI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+        </div>
+    
+        <div class="col-sm-4 videoContainer">
+            <iframe src="https://drive.google.com/file/d/1Pss_oNLa64zbB8OdCJjUB1zj7Vb4KNYv/preview" width="90%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    
+        <div class="col-sm-4 videoContainer">
+            <iframe src="https://drive.google.com/file/d/1lUXK06cWIYIcm8cMJcoedTnnCohcmmdV/preview" width="90%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+{% endblock %}
