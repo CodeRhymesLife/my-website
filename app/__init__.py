@@ -12,7 +12,7 @@ from .utils import assets
 
 LOG_TAG = '[Website]'
 
-if not app.debug:
+if app.debug:
     if not os.path.exists('logs'):
         os.mkdir('logs')
     file_handler = RotatingFileHandler('logs/website.log', maxBytes=10240,
