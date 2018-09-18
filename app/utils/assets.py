@@ -3,6 +3,16 @@ from .. import app
 
 bundles = {
 
+    'cv_js': Bundle(
+        'js/common.js',
+        output='gen/cv.js'),
+
+    'cv_css': Bundle(
+        'css/bootstrap-extensions.css',
+        'css/common.css',
+        'css/cv.css',
+        output='gen/cv.css'),
+
     'entrepreneurship_js': Bundle(
         'js/common.js',
         output='gen/entrepreneurship.js'),
@@ -12,15 +22,15 @@ bundles = {
         'css/common.css',
         output='gen/entrepreneurship.css'),
 
-    'healthcare_js': Bundle(
+    'hmd-navigation_js': Bundle(
         'js/common.js',
-        output='gen/helathcare.js'),
+        output='gen/hmd-navigation.js'),
 
-    'healthcare_css': Bundle(
+    'hmd-navigation_css': Bundle(
         'css/bootstrap-extensions.css',
         'css/common.css',
-        'css/healthcare.css',
-        output='gen/helathcare.css'),
+        'css/hmd-navigation.css',
+        output='gen/hmd-navigation.css'),
 
     'index_js': Bundle(
         'js/common.js',

@@ -1,9 +1,0 @@
-.videoContainer {
-    text-align: center;
-}
-
-@media (max-width: 768px) {
-    .videoContainer {
-        margin: 20px;
-    }
-}

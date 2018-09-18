@@ -17,32 +17,23 @@
 {% block app_content %}
     <h1>About Me</h1>
     <p>
-    I am a full stack healthcare technology software engineer building, researching and commercializing solutions to challenging healthcare problems.
-    Please click the links below to learn more about me.
+    I am a healthcare engineering researcher developing and commercializing new ways to deliver endovascular care 
+    through user-centered design, software development, market analysis and entrepreneurship.
+    I enjoy working on challenging problems with cross-disciplinary teams that want to improve access to safe care and decrease the economic burden for patients and providers.
     </p>
     
     <br/>
     
-    <div class="row interests">
-        <div class="col-sm-4">
-            <div class="interest" onclick="window.location.href='{{ url_for('software')}}'">
-                <span class="glyphicon glyphicon-console" aria-hidden="true"></span>
-                <h4>Software<br/>Engineering</h4>
+    {% if interests %}
+        <div class="row interests">
+        {% for interest in interests %}
+            <div class="col-sm-4">
+                <div class="interest" onclick="window.location.href='{{ interest.url }}'">
+                    <span class="glyphicon {{interest.glyphicon}}" aria-hidden="true"></span>
+                    <h4>{{interest.name}}</h4>
+                </div>
             </div>
+        {% endfor %}
         </div>
-    
-        <div class="col-sm-4">
-            <div class="interest" onclick="window.location.href='{{ url_for('healthcare')}}'">
-                <span class="glyphicon glyphicon-object-align-left" aria-hidden="true"></span>
-                <h4>Healthcare<br/>Technology</h4>
-            </div>
-        </div>
-    
-        <div class="col-sm-4">
-            <div class="interest" onclick="window.location.href='{{ url_for('entrepreneurship')}}'">
-                <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
-                <h4>Entrepreneurship</h4>
-            </div>
-        </div>
-    </div>
+    {% endif %}
 {% endblock %}

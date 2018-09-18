@@ -42,3 +42,45 @@
 .footer a, .footer a img {
     background-color: #808080;
 }
+
+.experience {
+    margin: 30px 0;
+}
+
+.experience li {
+    margin-bottom: 5px;
+}
+
+.experiences .icon {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.experiences .icon img,
+.experiences .icon a {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+.experiences .icon a:hover {
+    opacity: 0.5;
+}
+
+.experience .explination .name {
+    text-align: center;
+    background-color: #F8F8F8;
+}
+
+
+@media (max-width: 1200px) {
+    .experiences .row-eq-height {
+        display: block;
+    }
+
+    .experiences .icon img {
+        max-width: 300px;
+    }
+}
+

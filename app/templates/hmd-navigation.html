@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{super()}}
+    {% assets "hmd-navigation_css" %}
+        <link rel="stylesheet" href="{{ ASSET_URL }}" />
+    {% endassets %}
+{% endblock %}
+
+{% block scripts %}
+    {{super()}}
+    {% assets "hmd-navigation_js" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+{% endblock %}
+
+{% block app_content %}
+    <h1>HMD Procedural Guidance Systems</h1>
+    <p>
+        Endovascular procedures are minimally invasive treatments that are rapidly improving vascular care.
+        Unfortunately, many of these procedures are expensive, challenging and geographically confined.
+        Head mounted displays (HMDs) offer new opportunities to improve safety, increase portability and decrease costs.
+        My research explores these opportunities in an effort to improve clinical outcomes and increase who has access to care.
+        Rather than viewing on a flat screen, HMDs allow us to interact with medical data in the form of the object the data represents.
+        This allows us to understand it quicker and more accurately, which influences our decision making.
+        The videos below show the procedural guidance system I developed during my dissertation in collaboration with a team of forward thinking researchers and practitioners.
+    </p>
+
+    <div class="row">
+    {% for video in videos %}
+        <div class="col-sm-6 videoContainer">    
+            <div class="aspect-ratio">
+                <iframe src="{{video}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
