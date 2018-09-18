@@ -22,6 +22,15 @@ bundles = {
         'css/common.css',
         output='gen/entrepreneurship.css'),
 
+    'gallery_js': Bundle(
+        'js/common.js',
+        output='gen/gallery.js'),
+
+    'gallery_css': Bundle(
+        'css/bootstrap-extensions.css',
+        'css/common.css',
+        output='gen/gallery.css'),
+
     'hmd-navigation_js': Bundle(
         'js/common.js',
         output='gen/hmd-navigation.js'),

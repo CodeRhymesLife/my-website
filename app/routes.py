@@ -11,16 +11,13 @@ def cv():
 def entrepreneurship():
     return render_template('entrepreneurship.html', title='Entrepreneurship')
 
+@app.route('/gallery')
+def gallery():
+    return render_template('gallery.html', title='Gallery')
+
 @app.route('/hmd-navigation')
 def hmdNavigation():
-    return render_template(
-        'hmd-navigation.html',
-        title='HMD Navigation',
-        videos=[
-            'https://drive.google.com/file/d/1Pss_oNLa64zbB8OdCJjUB1zj7Vb4KNYv/preview',
-            'https://drive.google.com/file/d/1lUXK06cWIYIcm8cMJcoedTnnCohcmmdV/preview',
-        ]
-    )
+    return render_template('hmd-navigation.html', title='HMD Navigation')
 
 @app.route('/')
 @app.route('/index')
