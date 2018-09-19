@@ -13,7 +13,7 @@ def entrepreneurship():
 
 @app.route('/gallery')
 def gallery():
-    return render_template('gallery.html', title='Gallery')
+    return render_template('gallery.html', title='Research Photo Gallery')
 
 @app.route('/hmd-navigation')
 def hmdNavigation():

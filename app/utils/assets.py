@@ -23,11 +23,15 @@ bundles = {
         output='gen/entrepreneurship.css'),
 
     'gallery_js': Bundle(
+        'js/jquery.min.js',
+        'js/jquery.nanogallery2.min.js',
         'js/common.js',
+        'js/gallery.js',
         output='gen/gallery.js'),
 
     'gallery_css': Bundle(
         'css/bootstrap-extensions.css',
+        'css/nanogallery2.min.css',
         'css/common.css',
         output='gen/gallery.css'),
 

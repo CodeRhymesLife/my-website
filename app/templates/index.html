@@ -37,5 +37,12 @@
         </div>
     {% endif %}
 
-    {% include "hmd-simulation-gallery.html" %}
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <button class="btn btn-lg photo-gallery-btn" onclick="window.location.href='{{ url_for('gallery') }}'">
+                <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+                <h4>Photo Gallery</h4>
+            </button>
+        </div>
+    </div>
 {% endblock %}

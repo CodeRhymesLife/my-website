@@ -6,6 +6,7 @@
     height: 140px;
     padding: 10px;
     background-color: #F8F8F8;
+    border-radius: 10px;
 }
 
 .interests .interest:hover {
@@ -15,6 +16,16 @@
 
 .interests .interest .glyphicon {
     font-size: 5em;
+}
+
+.photo-gallery-btn {
+    margin-top: 50px;
+    background-color: #F8F8F8;
+}
+
+.photo-gallery-btn:hover {
+    background-color: #D8D8D8;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
