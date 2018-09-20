@@ -27,6 +27,7 @@ htmlcov/
 # Generated assets
 app/static/gen/
 app/static/.webassets-cache/
+app/static/.webassets-manifest
 
 # Google app engine
 lib/

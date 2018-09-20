@@ -4,11 +4,13 @@ import logging
 from logging.handlers import RotatingFileHandler
 import os
 
+from .utils.assets import init_assets
+
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
+init_assets(app)
 
 from app import routes
-from .utils import assets
 
 LOG_TAG = '[Website]'
 
