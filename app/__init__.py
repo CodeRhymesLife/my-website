@@ -7,12 +7,6 @@ import os
 from .utils.assets import init_assets
 
 app = Flask(__name__)
-bootstrap = Bootstrap(app)
-init_assets(app)
-
-from app import routes
-
-LOG_TAG = '[Website]'
 
 if app.debug:
     if not os.path.exists('logs'):
@@ -28,4 +22,9 @@ if app.debug:
     app.logger.addHandler(file_handler)
 
     app.logger.setLevel(logging.INFO)
-    app.logger.info('{} startup'.format(LOG_TAG))
+    app.logger.info('setup file handler logging')
+
+bootstrap = Bootstrap(app)
+init_assets(app)
+
+from app import routes

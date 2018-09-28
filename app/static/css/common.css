@@ -93,7 +93,7 @@
 
 @media (max-width: 768px) {
     .videoContainer {
-        margin: 20px;
+        margin: 20px 0;
     }
 }
 

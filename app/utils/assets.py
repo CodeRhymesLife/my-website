@@ -9,6 +9,9 @@ def init_assets(app):
         # App Enging doesn't support automatic building
         # so only auto build if in debug mode
         env.auto_build = app.debug
+        app.logger.info('auto_build set to {}'.format(
+            env.auto_build
+        ))
 
         # Make sure this file is shipped
         env.manifest = 'file'
@@ -17,6 +20,7 @@ def init_assets(app):
         
             'cv_js': Bundle(
                 'js/common.js',
+                'js/cv.js',
                 output='gen/cv.js'),
         
             'cv_css': Bundle(
