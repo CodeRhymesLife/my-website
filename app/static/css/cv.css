@@ -6,6 +6,11 @@
     display: none;
 }
 
+.col-sm-6 {
+    width: 50% !important;
+    float: left !important;
+}
+
 @media print {
     nav, footer, .footer-buffer {
         display: none !important;
@@ -24,6 +29,36 @@
 
     .experiences .icon img {
         max-width: 300px !important;
+    }
+
+    .videoContainer .video {
+        display: none;
+    }
+
+    .videoContainer .alt-img {
+        display: block;
+    }
+
+    .videoContainer .alt-img .play-icon-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .videoContainer .alt-img .play-icon-center-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
+
+    .videoContainer .alt-img .play-icon {
+        width: 77px;
+        height: 77px;
     }
 
     /* Bootstrap Fixes */
@@ -64,10 +99,5 @@
 
     .col-lg-9 {
         width: 75%;
-    }
-
-    .col-sm-6 {
-        width: 50% !important;
-        float: left !important;
     }
 }

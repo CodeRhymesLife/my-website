@@ -1,0 +1,15 @@
+{% macro render_video(col_class, video_url, alt_img_url, alt_img_href) %}
+    <div class="{{col_class}} videoContainer">
+        <div class="aspect-ratio video">
+            <iframe class="video" src="{{video_url}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <a class="alt-img" href="{{alt_img_href}}" target="__blank">
+            <img src="{{alt_img_url}}" />
+            <div class="play-icon-container">
+                <div class="play-icon-center-container">
+                    <img class="play-icon" src="static/images/icons/play-icon.png" />
+                </div>
+            </div>
+        </a>
+    </div>
+{% endmacro %}

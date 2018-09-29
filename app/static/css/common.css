@@ -91,6 +91,10 @@
     left: 0; top: 0;
 }
 
+.videoContainer .alt-img {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .videoContainer {
         margin: 20px 0;

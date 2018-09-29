@@ -1,5 +1,7 @@
 {% extends 'experiences/experience.html' %}
 
+{% import 'macros.jinja' as macros %}
+
 {% block experience_title %}
 Pear Med - Founder, CTO
 {% endblock %}
@@ -11,9 +13,7 @@ Pear Med - Founder, CTO
 {% block experience_content %}
     <p>We aimed to improve surgical planning through the commercialization of HMD planning tools</p>
     <div class="row">
-        <div class="col-sm-6 videoContainer">
-            <iframe width="90%" src="https://www.youtube.com/embed/8SUFeplhgBI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
-        </div>
+        {{ macros.render_video('col-sm-6', 'https://www.youtube.com/embed/8SUFeplhgBI', 'static/images/videos/bosc-baby-z.png', 'https://www.youtube.com/watch?v=8SUFeplhgBI') }}
     </div>
     <p>
         <h5>Accomplishments</h5>
