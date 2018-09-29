@@ -68,9 +68,14 @@
     opacity: 0.5;
 }
 
-.experience .explination .name {
+.position-name-and-date {
+    padding: 5px;
     text-align: center;
     background-color: #F8F8F8;
+}
+
+.position-name-and-date h4, .position-name-and-date h5 {
+    margin: 0;
 }
 
 .videoContainer {
@@ -93,6 +98,23 @@
 
 .videoContainer .alt-img {
     display: none;
+}
+
+.center-overlay-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.center-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
 }
 
 @media (max-width: 768px) {
