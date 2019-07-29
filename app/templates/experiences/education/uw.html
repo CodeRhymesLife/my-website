@@ -9,16 +9,41 @@ University of Washington
 {% endblock %}
 
 {% block experience_position %}
-PhD Candidate, Biomedical and Health Informatics
+PhD, Biomedical and Health Informatics
 {% endblock %}
 
 {% block experience_image %}
 <img src="static/images/logos/uw-logo.png"></img>
 {% endblock %}
 
+{%
+    set publications = [
+        {
+            'title': 'Fluoroscopically Guided Transseptal Puncture in a Cardiac Phantom',
+            'link': '',
+        },
+        {
+            'title': 'Angiography-Free Delivery of Transcatheter Arterial Embolization Using Virtual Reality Guidance',
+            'link': 'https://www.jvir.org/article/S1051-0443(18)32155-9/fulltext',
+        },
+        {
+            'title': 'Initial Experience with Renal Virtual Reality Models as Educational and Preoperative Planning Tools for Partial Nephrectomy',
+            'link': 'https://www.jurology.com/article/S0022-5347(18)40174-7/fulltext',
+        },
+        {
+            'title': 'Virtual-Reality Projected Renal Models with Urolithiasis as an Educational and Preoperative Planning Tool for Nephrolithotomy: A Pilot Study',
+            'link': 'https://www.jurology.com/article/S0022-5347(18)40188-7/fulltext',
+        },
+        {
+            'title': 'Semantics-Based Composition of Integrated Cardiomyocyte Models Motivated by Real-World Use Cases',
+            'link': 'http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0145621',
+        }
+    ]
+%}
+
 {% block experience_content %}
     <p>
-        Designed, developed and evaluated novel head mounted display (HMD) navigation systems for endovascular procedures
+        I designed, developed and evaluated novel head mounted display (HMD) navigation systems for endovascular procedures.
     </p>
 
     {% include "components/hmd-guidance-videos.html" %}
@@ -36,10 +61,15 @@ PhD Candidate, Biomedical and Health Informatics
     <p>
         <h5>Selected Publications:</h5>
         <ul>
-            <li>Angiography-Free Delivery of Transcatheter Arterial Embolization Using Virtual Reality Guidance</li>
-            <li><a href="https://www.jurology.com/article/S0022-5347(18)40174-7/fulltext" target="_blank">Initial Experience with Renal Virtual Reality Models as Educational and Preoperative Planning Tools for Partial Nephrectomy</a></li>
-            <li><a href="https://www.jurology.com/article/S0022-5347(18)40188-7/fulltext" target="_blank">Virtual-Reality Projected Renal Models with Urolithiasis as an Educational and Preoperative Planning Tool for Nephrolithotomy: A Pilot Study</a></li>
-            <li><a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0145621" target="_blank">Semantics-Based Composition of Integrated Cardiomyocyte Models Motivated by Real-World Use Cases</a></li>
+        {% for pub in publications %}
+            <li>
+            {% if pub['link'] %}
+                <a href="{{pub['link']}}" target="_blank">{{pub['title']}}</a>
+            {% else %}
+                {{pub['title']}}
+            {% endif %}
+            </li>
+        {% endfor %}
         </ul>
     </p>
 
