@@ -1,0 +1,30 @@
+{% extends 'experiences/experience.html' %}
+
+{% block experience_location %}
+Clara - Nvidia
+{% endblock %}
+
+{% block experience_dates %}
+2018 - 2019
+{% endblock %}
+
+{% block experience_position %}
+Senior Medical Software Engineer
+{% endblock %}
+
+{% block experience_image %}
+<img src="static/images/logos/industry/clara-square-logo.png"></img>
+{% endblock %}
+
+{% block experience_content %}
+    <p>
+        We developed an <a href="https://github.com/argoproj/argo" target="_blank">Argo</a>-based GPU accellerated medical imaging pipeline deployed with Kubernetes.
+        <ul>
+            <li><b>Kubernetes & Helm</b>: I worked with my team to develop and deploy a series of docker containers and resources using Kubernetes and Helm.</li>
+            <li><b>Machine Learning Pipelines</b>: I worked with machine learning developers to debug and deploy their containers in our service, gathering important user feedback along the way.</li>
+            <li><b>Command Line Interface</b>: I developed a command line interface, analogous to kubectl, to facilitate interactions with the Clara service in Kubernetes.</li>
+            <li><b>Logging Service</b>: I developed a logging service consisting of Elasticsearch, Fluentd and Kibana (EFK) to help my team debug and optimize our service.</li>
+        </ul>
+    </p>
+{% endblock %}
+

@@ -4,7 +4,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 import os
 
-from .utils.assets import init_assets
+from utils.assets import init_assets
 
 app = Flask(__name__)
 
