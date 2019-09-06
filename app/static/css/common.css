@@ -1,5 +1,32 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    color: rgb(34, 34, 34);
+    font-weight: 400;
+}
+
+h1, h2, h3, .navbar {
+    color: rgb(51, 51, 51);
+    font-weight: 900;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
 .navbar {
+    padding: 4vw 0;
+    margin: 0 4vw;
+    border-color: transparent;
     background-color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.content-block {
+    padding: 17px 0;
+    margin: 0;
 }
 
 .clear {

@@ -1,7 +1,7 @@
 {% extends 'bootstrap/base.html' %}
 
 {% block title %}
-    Ryan James, PhD{% if title %} - {{ title }}{% endif %}
+    {{ title }}
 {% endblock %}
 
 {% block navbar %}
@@ -10,16 +10,16 @@
 
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">
-                    <span class="glyphicon" aria-hidden="true"></span>
-                    <a class="navbar-brand" href="{{ url_for('index') }}">Ryan James, PhD</a> 
+                    <a class="navbar-brand" href="{{ url_for('index') }}">
+                        <span class="glyphicon" aria-hidden="true"></span>
+                    </a> 
                 </a>
             </div>
 
             <div class="navbar-right"> 
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url_for('software') }}">Software</a></li>
-                    <li><a href="{{ url_for('entrepreneurship') }}">Entrepreneurship</a></li>
-                    <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('aboutMe') }}">About Me</a></li>
                     <li><a href="{{ url_for('cv') }}">CV</a></li>
                 </ul>
             </div>

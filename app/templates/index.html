@@ -16,35 +16,34 @@
 
 {% block app_content %}
 
-    <img class="profile_pic" src="static/images/people/me.png"></img>
+    <div class="content-block">
+        <h1 class="name">Ryan James, PhD</h1>
+        <h2 class="roles">an engineer solving healthcare problems</h3>
+    </div>
 
-    <p>
-    I'm a software engineer focused on improving healthcare. Specifically, I'm interested in commercializing new ways to deliver care
-    through technology development and entrepreneurship.
-    I enjoy working on challenging problems with cross-disciplinary teams, and I am motivated by the potential to improve access to safe care on a global scale.
-    </p>
+    <hr class="content-block">
+
+    <h3 class="projects content-block">Projects</h3>
     
-    <br/>
-    
-    {% if interests %}
-        <div class="row interests">
-        {% for interest in interests %}
-            <div class="col-sm-4">
-                <div class="interest" onclick="window.location.href='{{ interest.url }}'">
-                    <span class="glyphicon {{interest.glyphicon}}" aria-hidden="true"></span>
-                    <h4>{{interest.name}}</h4>
+    <div class="content-block">
+        {% for tileRow in tileRows %}
+            <div class="row tiles content-block">
+            {% for tile in tileRow %}
+                <div class="col-sm-6">
+                    <a href="{{tile.url}}" target="__blank">
+                        <div class="tile">
+                            <img src="{{tile.img}}" />
+                            <div class="tile-content">
+                                <div class="title">{{tile.title}}</div>
+                                <div class="type">{{tile.type}}</div>
+                            </div>
+                        </div>
+                    </a>
+                    
                 </div>
+            {% endfor %}
             </div>
         {% endfor %}
-        </div>
-    {% endif %}
-
-    <div class="row">
-        <div class="col-sm-12 text-center">
-            <button class="btn btn-lg photo-gallery-btn" onclick="window.location.href='{{ url_for('gallery') }}'">
-                <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
-                <h4>Photo Gallery</h4>
-            </button>
-        </div>
     </div>
+
 {% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{super()}}
+    {% assets "aboutMe_css" %}
+        <link rel="stylesheet" href="{{ ASSET_URL }}" />
+    {% endassets %}
+{% endblock %}
+
+{% block scripts %}
+    {{super()}}
+    {% assets "index_js" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+{% endblock %}
+
+{% block app_content %}
+
+    <img class="profile_pic" src="static/images/people/me.png"></img>
+
+    <p>
+    I'm a software engineer focused on improving healthcare. Specifically, I'm interested in commercializing new ways to deliver care
+    through technology development and entrepreneurship.
+    I enjoy working on challenging problems with cross-disciplinary teams, and I am motivated by the potential to improve access to safe care on a global scale.
+    </p>
+    
+    <br/>
+    
+    {% if interests %}
+        <div class="row interests">
+        {% for interest in interests %}
+            <div class="col-sm-4">
+                <div class="interest" onclick="window.location.href='{{ interest.url }}'">
+                    <span class="glyphicon {{interest.glyphicon}}" aria-hidden="true"></span>
+                    <h4>{{interest.name}}</h4>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    {% endif %}
+
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <button class="btn btn-lg photo-gallery-btn" onclick="window.location.href='{{ url_for('gallery') }}'">
+                <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+                <h4>Photo Gallery</h4>
+            </button>
+        </div>
+    </div>
+{% endblock %}
