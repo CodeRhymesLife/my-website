@@ -18,7 +18,7 @@
 
             <div class="navbar-right"> 
                 <ul class="nav navbar-nav">
-                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
                     <li><a href="{{ url_for('aboutMe') }}">About Me</a></li>
                     <li><a href="{{ url_for('cv') }}">CV</a></li>
                 </ul>
@@ -42,32 +42,5 @@
         {% block app_content %}{% endblock %}
     </div>
 
-    {%- block footer %}
-        <div class="footer-buffer"></div>
-        <footer class="footer">
-            <div class="container">
-                <ul>
-                    <li>
-                        <a href="https://github.com/CodeRhymesLife" target="_blank">
-                            <img src="static/images/icons/github_icon.png"></img>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://www.linkedin.com/in/ryanjameshealth/" target="_blank">
-                            <img src="static/images/icons/linkedin_icon.png"></img>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://www.facebook.com/profile.php?id=2250837" target="_blank">
-                            <img src="static/images/icons/facebook_icon.png"></img>
-                        </a>
-
-                    </li>
-                </ul>
-            </div>
-        </footer>
-    {%- endblock footer %}
 {%- endblock content %}
 

@@ -9,42 +9,55 @@
 
 {% block scripts %}
     {{super()}}
-    {% assets "index_js" %}
+    {% assets "aboutMe_js" %}
         <script type="text/javascript" src="{{ ASSET_URL }}"></script>
     {% endassets %}
 {% endblock %}
 
 {% block app_content %}
 
-    <img class="profile_pic" src="static/images/people/me.png"></img>
-
-    <p>
-    I'm a software engineer focused on improving healthcare. Specifically, I'm interested in commercializing new ways to deliver care
-    through technology development and entrepreneurship.
-    I enjoy working on challenging problems with cross-disciplinary teams, and I am motivated by the potential to improve access to safe care on a global scale.
-    </p>
-    
-    <br/>
-    
-    {% if interests %}
-        <div class="row interests">
-        {% for interest in interests %}
-            <div class="col-sm-4">
-                <div class="interest" onclick="window.location.href='{{ interest.url }}'">
-                    <span class="glyphicon {{interest.glyphicon}}" aria-hidden="true"></span>
-                    <h4>{{interest.name}}</h4>
-                </div>
-            </div>
-        {% endfor %}
-        </div>
-    {% endif %}
-
     <div class="row">
-        <div class="col-sm-12 text-center">
-            <button class="btn btn-lg photo-gallery-btn" onclick="window.location.href='{{ url_for('gallery') }}'">
-                <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
-                <h4>Photo Gallery</h4>
-            </button>
+        <div class="col-sm-6">
+            <img class="profile_pic" src="static/images/people/me.png"></img>
+        </div>
+        <div class="col-sm-6">
+            <h3 class="content-block">Engineer &#183; Healthcare Researcher</h3>
+
+            <p class="content-block">
+                I am particularly interested in problems that address access to care issues.
+
+                ...and I love soccer.
+            </p>
+
+            <hr class="content-block">
+
+            <h3 class="content-block">Contact</h3>
+            <p>
+                <a href="mailto:rcjames1004@gmail.com">rcjames1004@gmail.com</a>
+            </p>
+
+            <div class="content-block">
+                <ul class="contact">
+                    <li>
+                        <a href="https://github.com/CodeRhymesLife" target="_blank">
+                            <img src="static/images/icons/github_icon.png"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/in/ryanjameshealth/" target="_blank">
+                            <img src="static/images/icons/linkedin_icon.png"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=2250837" target="_blank">
+                            <img src="static/images/icons/facebook_icon.png"></img>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 {% endblock %}

@@ -4,3 +4,27 @@
     margin-right: auto;
     margin-bottom: 30px;
 }
+
+ul.contact {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+ul.contact, ul.contact li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.contact a img {
+    height: 30px;
+    width: 30px;
+}
+
+.contact a img {
+    background-color: rgb(34, 34, 34, 0.5);
+}
+
+.contact a img:hover {
+    background-color: rgb(34, 34, 34, 1);
+}
