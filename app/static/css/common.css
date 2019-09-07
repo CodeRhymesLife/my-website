@@ -33,27 +33,6 @@ h3 {
     clear: both;
 }
 
-.footer, .footer-buffer {
-    height: 60px;
-}
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  line-height: 60px;
-  background-color: #F8F8F8;
-  opacity: 0.7;
-}
-
-.experience {
-    margin: 30px 0;
-}
-
-.experience li {
-    margin-bottom: 5px;
-}
-
 .experiences .icon {
     display: flex;
     align-items: center;
@@ -72,9 +51,7 @@ h3 {
 }
 
 .position-name-and-date {
-    padding: 5px;
-    text-align: center;
-    background-color: #F8F8F8;
+    padding: 10px 0;
 }
 
 .position-name-and-date h4, .position-name-and-date h5 {

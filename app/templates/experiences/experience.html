@@ -1,4 +1,4 @@
-<div class="row row-eq-height experience">
+<div class="row row-eq-height experience content-block">
     <div class="col-lg-3 icon">
         {% block experience_image %}{% endblock %}
     </div>
@@ -6,12 +6,12 @@
     <div class="col-lg-9 explination"> 
         <div class="row position-name-and-date">
             <div class="col-sm-12">
-                <h4 class="position">{% block experience_position %}{% endblock %}</h4>
+                <h3 class="position">{% block experience_position %}{% endblock %}</h3>
             </div>
 
             {% if self.experience_location() %}
             <div class="col-sm-12">
-                <h5 class="dates">{% block experience_location %}{% endblock %}| {% block experience_dates %}{% endblock %}</h5>
+                <h4 class="dates">{% block experience_location %}{% endblock %}| {% block experience_dates %}{% endblock %}</h4>
             </div>
             {% endif %}
         </div>
