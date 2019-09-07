@@ -29,7 +29,7 @@ def index():
                     'title': 'Planning',
                     'type': 'Video',
                     'img': 'static/images/tiles/bosc.png',
-                    'url': '#',
+                    'url': 'https://www.youtube.com/watch?v=H1NS6GyttLg',
                 },
                 {
                     'title': 'Model Service',
@@ -42,7 +42,7 @@ def index():
                 {
                     'title': 'Gallery',
                     'type': 'Photos',
-                    'img': 'static/images/tiles/catheye.png',
+                    'img': 'static/images/tiles/gallery.png',
                     'url': url_for('gallery'),
                 },
             ],
