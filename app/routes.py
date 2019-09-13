@@ -2,49 +2,61 @@ from flask import render_template, url_for
 
 from app import app
 
-
-@app.route('/cv')
-def cv():
-    return render_template('cv.html', title='CV')
-
-@app.route('/entrepreneurship')
-def entrepreneurship():
-    return render_template('entrepreneurship.html', title='Entrepreneurship')
-
-@app.route('/gallery')
-def gallery():
-    return render_template('gallery.html', title='Research Photo Gallery')
-
-@app.route('/hmd-navigation')
-def hmdNavigation():
-    return render_template('hmd-navigation.html', title='HMD Navigation')
-
 @app.route('/')
 @app.route('/index')
 def index():
+    projects = [
+        {
+            'title': 'Telerobotics',
+            'type': 'Album',
+            'img': 'static/images/tiles/telerobotics.png',
+            'url': 'https://photos.app.goo.gl/g1MVGr28j87cH8am7',
+        },
+        {
+            'title': 'VR Guidance',
+            'type': 'Article',
+            'img': 'static/images/tiles/catheye.png',
+            'url': 'https://medium.com/@ryanjameshealth/a-virtual-reality-surgical-guidance-system-9621e4b7b9ea',
+        },
+        {
+            'title': 'VR Planning',
+            'type': 'Video',
+            'img': 'static/images/tiles/bosc.png',
+            'url': 'https://www.youtube.com/watch?v=H1NS6GyttLg',
+        },
+        {
+            'title': 'Model Service',
+            'type': 'GitHub',
+            'img': 'static/images/tiles/3d-model-service.png',
+            'url': '',
+        },
+        {
+            'title': 'Simulation',
+            'type': 'Album',
+            'img': 'static/images/tiles/gallery.png',
+            'url': 'https://photos.app.goo.gl/KKUFqXMm7V1jNt5J8',
+        },
+    ]
+
+    isReady = lambda p: 'url' in p.keys() and p['url']
+
     return render_template(
         'index.html',
-        title='About Me',
-        interests=[
-            {
-                'name': 'Software Engineering',
-                'glyphicon': 'glyphicon-console',
-                'url': url_for('software'),
-            },
-            {
-                'name': 'HMD Navigation',
-                'glyphicon': 'glyphicon-sunglasses',
-                'url': url_for('hmdNavigation'),
-            },
-            {
-                'name': 'Entrepreneurship',
-                'glyphicon': 'glyphicon-globe',
-                'url': url_for('entrepreneurship'),
-            },
-        ]
+        title='Ryan James',
+        readyProjects=filter(isReady, projects),
+        comingSoonProjects=filter(lambda p: not isReady(p), projects),
     )
 
-@app.route('/software')
-def software():
-    return render_template('software.html', title='Software')
+@app.route('/aboutMe')
+def aboutMe():
+    return render_template(
+        'aboutMe.html',
+        title='About Me'
+    )
 
+@app.route('/cv')
+def cv():
+    return render_template(
+        'cv.html',
+        title='CV'
+    )

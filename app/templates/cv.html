@@ -1,22 +1,15 @@
 {% extends "base.html" %}
 
 {% macro panel(title, target, experiences) %}
-<div class="panel panel-default">
-    <div class="panel-heading" id="headingOne">
-        <h5 class="panel-title mb-0">
-            <button class="btn btn-link" data-toggle="collapse" data-target="#{{target}}" aria-expanded="true" aria-controls="{{target}}">
-                {{title}}
-            </button>
-        </h5>
-    </div>
-
-    <div id="{{target}}" class="panel-collapse collapse in">
-        <div class="panel-body">
-            {% with experiences=experiences %}
-            {% include "experiences/experiences.html" %}
-            {% endwith %}
-        </div>
-    </div>
+<div class="content-block">
+    <h2>{{title}}</h2>
+    <hr />
+</div>
+    
+<div>
+    {% with experiences=experiences %}
+    {% include "experiences/experiences.html" %}
+    {% endwith %}
 </div>
 {% endmacro %}
 
@@ -36,9 +29,9 @@
 
 {% block app_content %}
     <div class="header">
-        <h3>Ryan James, PhD</h3>
-        <h4>Software Engineer &#183 Healthcare Technology Researcher</h4>
-        <h4><a href="mailto:rcjames1004@gmail.com">rcjames1004@gmail.com</a> &#183 (269) 352-0400 &#183 <a href="https://www.linkedin.com/in/ryanjameshealth/">LinkedIn</a></h4>
+        <h1>Ryan James, PhD</h1>
+        <h4>Technology &#183 Data &#183 Healthcare</h4>
+        <h4><a href="mailto:rcjames1004@gmail.com">rcjames1004@gmail.com</a> &#183 (269) 352-0400 &#183 <a href="https://www.linkedin.com/in/ryanjameshealth/" target="__blank">LinkedIn</a></h4>
 
         <h5 class='cv-url'><a href="{{ url_for('cv', _external=True) }}">{{ url_for('cv', _external=True) }}</a></h5>
     </div>
@@ -46,7 +39,7 @@
     <div class="panel-group">
         {{ panel('Entrepreneurship', 'entrepreneurship', ['experiences/entrepreneurship/pyrus.html', 'experiences/entrepreneurship/pear-med.html']) }}
         {{ panel('Education', 'education', ['experiences/education/uw.html', 'experiences/education/um.html']) }}
-        {{ panel('Open Source', 'opensource', ['experiences/github.html']) }}
         {{ panel('Industry', 'industry', ['experiences/industry/nvidia.html', 'experiences/industry/oneNote.html', 'experiences/industry/access.html']) }}
+        {{ panel('Open Source', 'opensource', ['experiences/github.html']) }}
     </div>
 {% endblock %}

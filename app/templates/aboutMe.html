@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    {{super()}}
+    {% assets "aboutMe_css" %}
+        <link rel="stylesheet" href="{{ ASSET_URL }}" />
+    {% endassets %}
+{% endblock %}
+
+{% block scripts %}
+    {{super()}}
+    {% assets "aboutMe_js" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+{% endblock %}
+
+{% block app_content %}
+
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="profile_pic" src="static/images/people/me.png"></img>
+        </div>
+        <div class="col-sm-6">
+            <h3 class="content-block">Engineer &#183; Healthcare Researcher</h3>
+
+            <p class="content-block">
+                Hi,
+                <br />
+                <br />
+                I'm Ryan James and I love technology.
+                I am particularly intersted in the intersection of technology, data and healthcare.
+                My current focus is on telerobotic surgery and its potential to improve access to care, decrease costs, and generate data that we can use to make procedures safer.
+                <br />
+                <br />
+                Above all else, my favorite thing to do is hang out with my family.
+                <br />
+                <br />
+                Oh...and I love to watch and play soccer :)
+            </p>
+
+            <div class="content-block">
+                <hr />
+            </div>
+
+            <h3 class="content-block">Contact</h3>
+            <p>
+                <a href="mailto:rcjames1004@gmail.com">rcjames1004@gmail.com</a>
+            </p>
+
+            <div class="content-block">
+                <ul class="contact">
+                    <li>
+                        <a href="https://github.com/CodeRhymesLife" target="_blank">
+                            <img src="static/images/icons/github_icon.png"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/in/ryanjameshealth/" target="_blank">
+                            <img src="static/images/icons/linkedin_icon.png"></img>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=2250837" target="_blank">
+                            <img src="static/images/icons/facebook_icon.png"></img>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

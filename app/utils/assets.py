@@ -29,38 +29,16 @@ def init_assets(app):
                 'css/cv.css',
                 output='gen/cv.css'),
         
-            'entrepreneurship_js': Bundle(
+            'aboutMe_js': Bundle(
                 'js/common.js',
-                output='gen/entrepreneurship.js'),
+                output='gen/aboutMe.js'),
         
-            'entrepreneurship_css': Bundle(
+            'aboutMe_css': Bundle(
                 'css/bootstrap-extensions.css',
                 'css/common.css',
-                output='gen/entrepreneurship.css'),
-        
-            'gallery_js': Bundle(
-                'js/jquery.min.js',
-                'js/jquery.nanogallery2.min.js',
-                'js/common.js',
-                'js/gallery.js',
-                output='gen/gallery.js'),
-        
-            'gallery_css': Bundle(
-                'css/bootstrap-extensions.css',
-                'css/nanogallery2.min.css',
-                'css/common.css',
-                output='gen/gallery.css'),
-        
-            'hmd-navigation_js': Bundle(
-                'js/common.js',
-                output='gen/hmd-navigation.js'),
-        
-            'hmd-navigation_css': Bundle(
-                'css/bootstrap-extensions.css',
-                'css/common.css',
-                'css/hmd-navigation.css',
-                output='gen/hmd-navigation.css'),
-        
+                'css/aboutMe.css',
+                output='gen/aboutMe.css'),
+
             'index_js': Bundle(
                 'js/common.js',
                 output='gen/index.js'),
@@ -70,16 +48,6 @@ def init_assets(app):
                 'css/common.css',
                 'css/index.css',
                 output='gen/index.css'),
-        
-            'software_js': Bundle(
-                'js/common.js',
-                output='gen/software.js'),
-        
-            'software_css': Bundle(
-                'css/bootstrap-extensions.css',
-                'css/common.css',
-                'css/software.css',
-                output='gen/software.css'),
         }
          
         env.register(bundles)

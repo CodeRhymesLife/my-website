@@ -14,37 +14,55 @@
     {% endassets %}
 {% endblock %}
 
-{% block app_content %}
-
-    <img class="profile_pic" src="static/images/people/me.png"></img>
-
-    <p>
-    I'm a software engineer focused on improving healthcare. Specifically, I'm interested in commercializing new ways to deliver care
-    through technology development and entrepreneurship.
-    I enjoy working on challenging problems with cross-disciplinary teams, and I am motivated by the potential to improve access to safe care on a global scale.
-    </p>
-    
-    <br/>
-    
-    {% if interests %}
-        <div class="row interests">
-        {% for interest in interests %}
-            <div class="col-sm-4">
-                <div class="interest" onclick="window.location.href='{{ interest.url }}'">
-                    <span class="glyphicon {{interest.glyphicon}}" aria-hidden="true"></span>
-                    <h4>{{interest.name}}</h4>
-                </div>
+{% macro renderTiles(tiles) %}
+    {% for tileRow in tiles|batch(2) %}
+        <div class="row tiles">
+        {% for tile in tileRow %}
+            <div class="col-sm-6">
+                {% if tile.url %}
+                <a href="{{tile.url}}" target="__blank">
+                {% endif %}
+                    <div class="tile">
+                        <div class="imgContainer">
+                            <img src="{{tile.img}}" />
+                        </div>
+                        <div class="tile-content">
+                            <div class="title">{{tile.title}}</div>
+                            <div class="type">{{tile.type}}</div>
+                        </div>
+                    </div>
+                {% if tile.url %}
+                </a>
+                {% endif %}
             </div>
         {% endfor %}
         </div>
-    {% endif %}
+    {% endfor %}
+{% endmacro %}
 
-    <div class="row">
-        <div class="col-sm-12 text-center">
-            <button class="btn btn-lg photo-gallery-btn" onclick="window.location.href='{{ url_for('gallery') }}'">
-                <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
-                <h4>Photo Gallery</h4>
-            </button>
-        </div>
+{% block app_content %}
+
+    <div class="content-block">
+        <h1 class="name">Ryan James, PhD</h1>
+        <h2 class="roles">an engineer solving healthcare problems</h3>
     </div>
+
+    <div class="content-block">
+        <hr />
+    </div>
+
+    <h3 class="projects content-block">Projects</h3>
+    <div class="content-block">
+        {{ renderTiles(readyProjects) }}
+    </div>
+
+    <div class="content-block">
+        <hr />
+    </div>
+
+    <h3 class="projects content-block">Coming soon</h3>
+    <div class="content-block">
+        {{ renderTiles(comingSoonProjects) }}
+    </div>
+
 {% endblock %}
