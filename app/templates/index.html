@@ -14,6 +14,32 @@
     {% endassets %}
 {% endblock %}
 
+{% macro renderTiles(tiles) %}
+    {% for tileRow in tiles|batch(2) %}
+        <div class="row tiles">
+        {% for tile in tileRow %}
+            <div class="col-sm-6">
+                {% if tile.url %}
+                <a href="{{tile.url}}" target="__blank">
+                {% endif %}
+                    <div class="tile">
+                        <div class="imgContainer">
+                            <img src="{{tile.img}}" />
+                        </div>
+                        <div class="tile-content">
+                            <div class="title">{{tile.title}}</div>
+                            <div class="type">{{tile.type}}</div>
+                        </div>
+                    </div>
+                {% if tile.url %}
+                </a>
+                {% endif %}
+            </div>
+        {% endfor %}
+        </div>
+    {% endfor %}
+{% endmacro %}
+
 {% block app_content %}
 
     <div class="content-block">
@@ -26,28 +52,8 @@
     </div>
 
     <h3 class="projects content-block">Projects</h3>
-
     <div class="content-block">
-        {% for tileRow in readyProjects|batch(2) %}
-            <div class="row tiles">
-            {% for tile in tileRow %}
-                <div class="col-sm-6">
-                    <a href="{{tile.url}}" target="__blank">
-                        <div class="tile">
-                            <div class="imgContainer">
-                                <img src="{{tile.img}}" />
-                            </div>
-                            <div class="tile-content">
-                                <div class="title">{{tile.title}}</div>
-                                <div class="type">{{tile.type}}</div>
-                            </div>
-                        </div>
-                    </a>
-
-                </div>
-            {% endfor %}
-            </div>
-        {% endfor %}
+        {{ renderTiles(readyProjects) }}
     </div>
 
     <div class="content-block">
@@ -55,26 +61,8 @@
     </div>
 
     <h3 class="projects content-block">Coming soon</h3>
-
     <div class="content-block">
-        {% for tileRow in comingSoonProjects|batch(2) %}
-            <div class="row tiles content-block">
-            {% for tile in tileRow %}
-                <div class="col-sm-6">
-                    <div class="tile">
-                        <div class="imgContainer">
-                            <img src="{{tile.img}}" />
-                        </div>
-                        <div class="tile-content">
-                            <div class="title">{{tile.title}}</div>
-                            <div class="type">{{tile.type}}</div>
-                        </div>
-                    </div>
-                    
-                </div>
-            {% endfor %}
-            </div>
-        {% endfor %}
+        {{ renderTiles(comingSoonProjects) }}
     </div>
 
 {% endblock %}
