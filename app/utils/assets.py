@@ -38,20 +38,7 @@ def init_assets(app):
                 'css/common.css',
                 'css/aboutMe.css',
                 output='gen/aboutMe.css'),
-        
-            'gallery_js': Bundle(
-                'js/jquery.min.js',
-                'js/jquery.nanogallery2.min.js',
-                'js/common.js',
-                'js/gallery.js',
-                output='gen/gallery.js'),
-        
-            'gallery_css': Bundle(
-                'css/bootstrap-extensions.css',
-                'css/nanogallery2.min.css',
-                'css/common.css',
-                output='gen/gallery.css'),
-        
+
             'index_js': Bundle(
                 'js/common.js',
                 output='gen/index.js'),
