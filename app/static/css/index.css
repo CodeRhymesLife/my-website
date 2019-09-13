@@ -16,16 +16,33 @@
     padding: 17px 0;
 }
 
+.row.tiles {
+    padding: 17px 17px;
+}
+
 .tile {
     text-align: center;
     height: 312.1875px;
-    background: rgba(0, 0, 0, 0.7);
 }
 
-.tile img {
-    height: 100%;
+.tile .imgContainer {
+    display: block;
     width: 100%;
+    position: relative;
+    height: 100%;
+    padding: 57.96 0 0 0;
+    overflow: hidden;
+}
+.tile img {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
     filter: brightness(30%);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .tile img:hover {
@@ -50,38 +67,12 @@
     color: #E0E0E0;
 }
 
-.interests {
-    text-align: center;
-}
-
-.interests .interest {
-    height: 140px;
-    padding: 10px;
-    background-color: #F8F8F8;
-    border-radius: 10px;
-}
-
-.interests .interest:hover {
-    background-color: #D8D8D8;
-    cursor: pointer;
-}
-
-.interests .interest .glyphicon {
-    font-size: 5em;
-}
-
-.photo-gallery-btn {
-    margin-top: 50px;
-    background-color: #F8F8F8;
-}
-
-.photo-gallery-btn:hover {
-    background-color: #D8D8D8;
-    cursor: pointer;
-}
-
 @media (max-width: 768px) {
-    .interests .interest, .page.healthcare .videoContainer {
-        margin: 20px;
+    .row.tiles {
+        padding: 0;
+    }
+
+    .col-sm-6 {
+        padding: 17px 17px;
     }
 }

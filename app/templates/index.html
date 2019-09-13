@@ -29,12 +29,14 @@
 
     <div class="content-block">
         {% for tileRow in readyProjects|batch(2) %}
-            <div class="row tiles content-block">
+            <div class="row tiles">
             {% for tile in tileRow %}
                 <div class="col-sm-6">
                     <a href="{{tile.url}}" target="__blank">
                         <div class="tile">
-                            <img src="{{tile.img}}" />
+                            <div class="imgContainer">
+                                <img src="{{tile.img}}" />
+                            </div>
                             <div class="tile-content">
                                 <div class="title">{{tile.title}}</div>
                                 <div class="type">{{tile.type}}</div>
@@ -60,7 +62,9 @@
             {% for tile in tileRow %}
                 <div class="col-sm-6">
                     <div class="tile">
-                        <img src="{{tile.img}}" />
+                        <div class="imgContainer">
+                            <img src="{{tile.img}}" />
+                        </div>
                         <div class="tile-content">
                             <div class="title">{{tile.title}}</div>
                             <div class="type">{{tile.type}}</div>

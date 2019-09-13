@@ -60,10 +60,3 @@ def cv():
         'cv.html',
         title='CV'
     )
-
-@app.route('/gallery')
-def gallery():
-    return render_template(
-        'gallery.html',
-        title='Photo Gallery'
-    )
