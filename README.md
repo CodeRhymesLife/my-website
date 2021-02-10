@@ -13,3 +13,9 @@ My website
 ```shell
 $ docker build -t rcjames/ryan-james-health-dot-com .
 ```
+
+## Heroku
+
+```shell
+$ git push heroku master
+```
