@@ -31,3 +31,5 @@ app/static/.webassets-manifest
 
 # Google app engine
 lib/
+
+.mypy_cache/
