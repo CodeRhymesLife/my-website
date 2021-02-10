@@ -7,3 +7,9 @@ My website
 3) Activate the virtual env ```source venv/bin/activate```
 4) Install dependencies ```pip install -r requirements.txt```
 5) Point flask to the correct entry point ```cp .flaskenv.example .flaskenv```
+
+## Docker
+
+```shell
+$ docker build -t rcjames/ryan-james-health-dot-com .
+```

@@ -54,6 +54,9 @@ def init_assets(app):
         return bundles
 
 if __name__ == '__main__':
-    bundles = init_assets()
+    from flask import Flask
+
+    app = Flask("asset_builder")
+    bundles = init_assets(app)
     for bundleKey in bundles:
         bundles[bundleKey].build()
