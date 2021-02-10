@@ -1,6 +1,5 @@
 language: python
-services:
-- heroku
+script: true
 deploy:
 - provider: heroku
   api_key:
