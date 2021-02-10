@@ -1,0 +1,33 @@
+{% extends 'experiences/experience.html' %}
+
+{% import 'macros.jinja' as macros %}
+
+{% block experience_location %}
+DOPL
+{% endblock %}
+
+{% block experience_dates %}
+2020 - Present
+{% endblock %}
+
+{% block experience_position %}
+Chief Technology Officer
+{% endblock %}
+
+{% block experience_title %}
+<a href="http://www.dopltechnologies.com" target="__blank">Pyrus</a> - Founder, CTO
+{% endblock %}
+
+{% block experience_image %}
+<img src="static/images/logos/entrepreneurship/dopl-logo.png"></img>
+{% endblock %}
+
+{% block experience_content %}
+    <p>
+        Revolutioning procedural medicine through telerobotic surgery. <a href="https://github.com/dopl-technologies" >GitHub</a>
+    </p>
+    <div class="row">
+        {{ macros.render_video('col-sm-6', 'https://www.youtube.com/embed/DwsbejY8sRo', '', 'https://www.youtube.com/watch?v=DwsbejY8sRo') }}
+    </div>
+{% endblock %}
+
